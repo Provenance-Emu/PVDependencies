@@ -7,7 +7,7 @@ import PackageDescription
 //
 // Depend on a version tag. The release workflow fills this in on the tagged commit only,
 // so on `main` the package has no products.
-let binaryRelease: (version: String, checksums: [String: String])? = nil
+let binaryRelease: (version: String, checksums: [String: String])? = ("1.0.0", ["SQLite": "341c62016621ad56443be795faaabe5f5e587a913675bfb48a662291f3ffae73", "ZIPFoundation": "64a7b048aa2f8471e9f60b78275be5004e248b14836b1e5ca35804c11fc0db28"])
 
 let modules = (binaryRelease?.checksums ?? [:]).sorted { $0.key < $1.key }
 
